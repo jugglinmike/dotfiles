@@ -32,10 +32,3 @@ PATH="${PATH}:/home/mike/.gem/ruby/1.9.1/bin"
 
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
-
-# Shopximity
-M2_HOME="/usr/local/apache-maven/apache-maven-3.0.3"
-M2="${M2_HOME}/bin"
-JAVA_HOME="/usr/lib/jvm/java-6-openjdk"
-export SPX_DEV_ROOT="/home/mike/projects/shopximity/spx-web"
-PATH="${PATH}:${JAVA_HOME}:${M2}"
