@@ -1,0 +1,60 @@
+! ----------------------------------------------------------------------------
+! file:     ~/.Xdefaults
+! author:   Tim Branyen - http://www.tabdeveloper.com/
+! modified: January 2011
+! vim:      nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+! ----------------------------------------------------------------------------
+
+! Colors
+URxvt.background:  #1c1c1c
+URxvt.foreground:  #efefcf
+URxvt*color0:      #1c1c1c
+URxvt*color1:      #ff9383
+URxvt*color2:      #aece92
+URxvt*color3:      #ffd674
+URxvt*color4:      #7ab2ff
+URxvt*color5:      #ff5287
+URxvt*color6:      #418179
+URxvt*color7:      #bebebe
+URxvt*color8:      #666666
+URxvt*color9:      #cf6171
+URxvt*color10:     #dcffa4
+URxvt*color11:     #fff796
+URxvt*color12:     #4186be
+URxvt*color13:     #cf9ebe
+URxvt*color14:     #71bebe
+URxvt*color15:     #ffffff
+
+! DPI font
+Xft.dpi: 96.0
+Xft.antialias: true
+
+! Look and feel
+URxvt*scrollBar_right: false
+URxvt*scrollBar: false
+URxvt*borderLess: false
+URxvt*tintColor: white
+URxvt*shading: 10
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=13
+URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=13
+URxvt*background: #000000
+URxvt*foreground: #FFFFFF
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 2
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+
+! OS X Stuff
+URxvt.perl-ext-common: macosx-clipboard
+URxvt*keysym.M-c: perl:macosx-clipboard:copy
+URxvt*keysym.M-v: perl:macosx-clipboard:paste
+
+! Tabs support
+URxvt.perl-ext-common:  default,tabbed
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    2
+URxvt.tabbed.tab-bg:    0
+
+! Compatibility settings
+URxvt*termName: rxvt-256color

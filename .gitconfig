@@ -1,0 +1,7 @@
+[user]
+	name = Mike Pennisi
+	email = mike@mikepennisi.com
+[core]
+	editor = vim
+[color]
+	ui = true
