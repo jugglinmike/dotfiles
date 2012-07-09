@@ -52,12 +52,7 @@ if bufwinnr(1)
 end
 
 " -------------------------
-" Project-specific commands
+" Project-specific settings
 
-" TagMan
-" Use soft tabs
 au BufRead,BufNewFile ~/projects/pbs/* set tabstop=4 softtabstop=4 expandtab
-au BufRead,BufNewFile ~/projects/tagman/* set tabstop=4 softtabstop=4 expandtab
 au BufRead,BufNewFile ~/projects/boxbox/* set tabstop=4 softtabstop=4 expandtab
-
-au BufRead,BufNewFile ~/projects/tagman/qa-tool/* set tabstop=2 softtabstop=2 expandtab
