@@ -32,3 +32,5 @@ PATH="${PATH}:/home/mike/.gem/ruby/1.9.1/bin"
 
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
+
+source ~/.git-completion.sh
