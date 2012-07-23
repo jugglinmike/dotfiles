@@ -34,3 +34,7 @@ export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 
 source ~/.git-completion.sh
+
+# For Node.js
+export PATH=/usr/local/bin:$PATH
+export PATH=./node_modules/.bin:$PATH
