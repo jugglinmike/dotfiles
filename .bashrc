@@ -27,14 +27,16 @@ if [ -x /usr/bin/dircolors ]; then
 	alias grep='grep --color=auto'
 fi
 
-
-export WORKON_HOME=~/.virtualenvs
 source ~/.git-completion.sh
+
+# For Python
+export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # For Node.js
 export PATH=/usr/local/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
 
+# For Ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
