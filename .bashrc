@@ -27,8 +27,6 @@ if [ -x /usr/bin/dircolors ]; then
 	alias grep='grep --color=auto'
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-PATH="${PATH}:/home/mike/.gem/ruby/1.9.1/bin"
 
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
@@ -38,3 +36,6 @@ source ~/.git-completion.sh
 # For Node.js
 export PATH=/usr/local/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
