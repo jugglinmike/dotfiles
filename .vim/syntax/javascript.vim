@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:     JavaScript
-" Maintainer:   Tim Branyen (tbranyen) <tim@tabdeveloper.com>
-" Last Change:  January 7, 2012
+" Maintainer:   Mike Pennisi (jugglinmike) <mike@mikepennisi.com>
+" Last Change:  August 28, 2012
 
 if !exists("main_syntax")
   if version < 600
@@ -46,10 +46,10 @@ syn keyword javaScriptIdentifier    arguments this var let
 syn keyword javaScriptLabel     case default
 syn keyword javaScriptException     try catch finally throw
 syn keyword javaScriptMessage       alert confirm prompt status
-syn keyword javaScriptGlobal        self window top parent
-syn keyword javaScriptMember        document event location 
+syn keyword javaScriptGlobal        window global
+syn keyword javaScriptMember        document event location prototype
 syn keyword javaScriptDeprecated    escape unescape __proto__
-syn keyword javaScriptReserved      abstract boolean byte char class const debugger double enum export extends final float goto implements import int interface long native package private protected public short static super synchronized throws transient volatile 
+syn keyword javaScriptReserved      abstract boolean byte char class const debugger default double enum export extends final float goto implements import int interface long native package private protected public short static super synchronized throws transient volatile 
 
 "syn match javaScript ".*" contains=javaScriptCommentTodo,javaScriptLineComment,javaScriptCommentSkip,javaScriptSpecial,javaScriptStringD,javaScriptStringS,javaScriptSpecialCharacter,javaScriptNumber,javaScriptRegexpString,javaScriptConditional,javaScriptRepeat,javaScriptBranch,javaScriptOperator,javaScriptType,javaScriptStatement,javaScriptBoolean,javaScriptNull,javaScriptIdentifier,javaScriptLabel,javaScriptException,javaScriptMessage,javaScriptGlobal,JavaScriptMember,javaScriptDeprecated,javaScriptReserved
 
