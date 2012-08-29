@@ -33,6 +33,9 @@ set clipboard+=unnamed
 
 filetype plugin indent on
 
+" Custom filetypes
+au BufNewFile,BufRead *.md set ft=markdown
+
 " Use Unix fileformat regardless of the format of the current file
 set ff=unix
 
