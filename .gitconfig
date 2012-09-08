@@ -3,5 +3,6 @@
 	email = mike@mikepennisi.com
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore-global
 [color]
 	ui = true
