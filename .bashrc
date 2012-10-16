@@ -34,7 +34,7 @@ export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # For Node.js
-export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:/opt/joyent/node/bin
 
 # For Ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
