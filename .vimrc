@@ -5,6 +5,11 @@ set t_Co=256
 set background=dark
 color wombat256mod
 hi Number		ctermfg=73		cterm=none		guifg=#e5786d	gui=none
+execute pathogen#infect()
+
+" NERDTree
+let NERDTreeChDirMode = 1
+map <silent> <leader>f :NERDTreeToggle<CR>
 
 " Tabs!
 " Hard tabs
