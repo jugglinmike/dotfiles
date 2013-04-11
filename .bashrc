@@ -29,6 +29,8 @@ fi
 
 source ~/.git-completion.sh
 
+PATH=$PATH:/sbin:/usr/sbin
+
 # For Python
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
