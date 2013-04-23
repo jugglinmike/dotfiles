@@ -11,8 +11,7 @@
 	var text = [];
 	var styleNode;
 	// Set tab size for normal views and blame views
-	text.push(".file .line-data, .file .line { tab-size: 4; }");
-	text = text.join(" ").replace(/\s*;/g, " !important;");
+	text.push(".file .line-data, .file .line { -moz-tab-size: 4; tab-size: 4; }");
 	styleNode = document.createElement("style");
 	styleNode.innerText = text;
 	document.body.appendChild(styleNode);
