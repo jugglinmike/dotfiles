@@ -40,6 +40,7 @@ filetype plugin indent on
 
 " Custom filetypes
 au BufNewFile,BufRead *.md set ft=markdown
+au BufNewFile,BufRead *.pro set ft=prolog
 
 " Use Unix fileformat regardless of the format of the current file
 set ff=unix
