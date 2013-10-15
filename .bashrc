@@ -29,6 +29,19 @@ fi
 
 source ~/.git-completion.sh
 
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+# prompt
+function proml {
+TITLEBAR=""
+PS1="${TITLEBAR}[\u@\h \W]$WHITE\$(parse_git_branch)$ "
+PS2='> '
+PS4='+ '
+}
+proml
+
 PATH=$PATH:/sbin:/usr/sbin
 
 # For Python
