@@ -10,6 +10,7 @@ execute pathogen#infect()
 " NERDTree
 let NERDTreeChDirMode = 1
 map <silent> <leader>f :NERDTreeToggle<CR>
+let NERDTreeIgnore=['.pyc$[[file]]']
 
 " Tabs!
 " Hard tabs
