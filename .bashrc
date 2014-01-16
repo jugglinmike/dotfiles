@@ -54,3 +54,9 @@ export PATH=$PATH:/opt/joyent/node/bin
 # For Ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Clone the git repo at the given GitHub Gist ID (useful because GitHub does
+# not currently offer the git URL for Gists)
+function gist-clone() {
+  git clone git@gist.github.com:$1.git $2
+}
