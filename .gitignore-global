@@ -3,3 +3,5 @@
 
 # Vim temp files
 *~
+
+.rbenv-version
