@@ -64,5 +64,17 @@ end
 " -------------------------
 " Project-specific settings
 
-au BufRead,BufNewFile ~/projects/pbs/* set tabstop=4 softtabstop=4 expandtab
-au BufRead,BufNewFile ~/projects/boxbox/* set tabstop=4 softtabstop=4 expandtab
+au BufRead,BufNewFile ~/projects/bocoup/Bocoup.com/* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/backbone.layoutmanager/* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/crypto-research/* set tabstop=4 softtabstop=4 expandtab
+au BufRead,BufNewFile ~/projects/soso/* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/fortpoint.me/* set tabstop=4 softtabstop=4 expandtab
+au BufRead,BufNewFile ~/projects/cheerio/cheerio/* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/backbone.search/* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/mozilla/* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/qunit-mocha-ui/* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/amdclean2/* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/bocoup/roost* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/transmogrify/* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/jquery.pep.js/* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/whac-a-mole/* set tabstop=2 softtabstop=2 expandtab
