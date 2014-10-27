@@ -4,6 +4,8 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore-global
+[rerere]
+	enabled = true
 [color]
 	ui = true
 [alias]
