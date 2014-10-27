@@ -1,4 +1,4 @@
-#!/usr/bin bash
+#!/usr/bin/env bash
 
 # Clone the git repo at the given GitHub Gist ID (useful because GitHub does
 # not currently offer the git URL for Gists)
