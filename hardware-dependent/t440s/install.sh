@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-sudo ln --symbolic --verbose $(readlink -f xorg.conf.d) /etc/X11
+sudo mkdir -p /etc/X11/xorg.conf.d
+sudo cp xorg.conf.d/50-synaptics.conf /etc/X11/xorg.conf.d
