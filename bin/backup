@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+function help() {
+  cat <<HELP
+Usage: backup [SRC] [DEST]
+Clone the contents of the SRC directory into the DEST directory, preserving
+files that already exist in DEST and honoring ignore rules specified by any
+subdirectory's '.gitignore' file.
+HELP
+}
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then help; exit; fi
+if [[ "$1" == "" || "$2" == "" ]]; then help; exit 1; fi
+
+rsync \
+  --archive \
+  --progress \
+  --filter="dir-merge,-n /.gitignore" \
+  $1 $2
