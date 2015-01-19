@@ -10,4 +10,4 @@
 	ui = true
 [alias]
 	trailing-newlines = !git ls-files | xargs sed -i -e '$a\\'
-	list-branch-by-date = !git for-each-ref --sort=committerdate --format='%(committerdate:local) %(objectname:short) %(refname) \t %(subject)' refs/heads/
+	list-branch-by-date = !git for-each-ref --sort=committerdate --format='%(committerdate:local)\t%(objectname:short)\t%(refname)\t%(subject)' refs/heads/ | column -t -s '\t'
