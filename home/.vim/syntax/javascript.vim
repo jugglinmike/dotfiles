@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:     JavaScript
 " Maintainer:   Mike Pennisi (jugglinmike) <mike@mikepennisi.com>
-" Last Change:  August 28, 2012
+" Last Change:  July 2, 2015
 
 if !exists("main_syntax")
   if version < 600
@@ -32,7 +32,7 @@ syn region  javaScriptStringS          start=+'+  skip=+\\\\\|\\'+  end=+'\|$+  
 
 syn match   javaScriptSpecialCharacter "'\\.'"
 syn match   javaScriptNumber           "-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
-syn region  javaScriptRegexpString     start=+/[^/*]+me=e-1 skip=+\\\\\|\\/+ end=+/[gi]\{0,2\}\s*$+ end=+/[gi]\{0,2\}\s*[;.,)\]}]+me=e-1 contains=@htmlPreproc oneline
+syn region  javaScriptRegexpString     start=+/[^/*]+me=e-1 skip=+\\\\\|\\/+ end=+/[giuy]\{0,2\}\s*$+ end=+/[giuy]\{0,2\}\s*[;.,)\]}]+me=e-1 contains=@htmlPreproc oneline
 
 syn keyword javaScriptConditional   if else switch
 syn keyword javaScriptRepeat        while for do in
