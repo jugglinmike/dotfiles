@@ -1,0 +1,25 @@
+#!/bin/bash
+
+function help() {
+  cat <<HELP
+Usage clean-kernels [-y|--yes]
+Remove any unused kernels that have accumulated as a result of normal system
+updates. Simply lists unused kernels by default; tpecify `-y` or `--yes` to
+trigger removal.
+
+See http://markmcb.com/2013/02/04/cleanup-unused-linux-kernels-in-ubuntu/ for
+more information.
+HELP
+}
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then help; exit; fi
+
+KERNELS=$(dpkg -l 'linux-*' | \
+  sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d')
+
+if [[ "$1" == "-y" || "$1" == "--yes" ]]; then
+  apt-get -y purge $KERNELS
+else
+  echo "The following kernels will be removed by this command:"
+  echo $KERNELS
+fi
