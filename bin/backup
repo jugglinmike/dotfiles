@@ -44,8 +44,14 @@ prefix=$logdir/$prefix
 # - files mentioned in a .gitignore file. These are typically artifacts of
 #   active development (build files, downloaded binaries, etc) and therefore
 #   not appropriate for backup
-# - `.git` directories and their contents. These are synchronized with a
-#   dedicated later in this script.
+#
+# NOTE TO SELF: I've disabled the following behavior because it's an
+# optimization that is more dangerous than it's worth. If storage space ever
+# becomes an issue, revisit by using the `--exclude=".git/"` option and
+# removing the `exit` command.
+#
+# > - `.git` directories and their contents. These are synchronized with a
+# >   dedicated command later in this script
 rsync \
   --archive \
   --progress \
@@ -53,11 +59,12 @@ rsync \
   --copy-dirlinks \
   --omit-dir-times \
   --no-perms \
-  --filter="dir-merge,-n /.gitignore" \
-  --exclude=".git/" \
+  --filter="dir-merge,- /.gitignore" \
   $1 $2 \
   2> >(tee $prefix-err.log) \
   1> >(tee $prefix-out.log)
+
+exit
 
 echo
 echo 'Now syncing git directories...'
@@ -101,10 +108,12 @@ echo
 # any directories in the selection that exist outside of a `.git` directory are
 # not modified.
 rsync \
-  --archive \
+  --recursive \
   --progress \
+  --copy-dirlinks \
   $dry_run_flag \
   --delete \
+  --filter="dir-merge,- /.gitignore" \
   --filter='risk .git/**/' \
   --filter='protect */' \
   --include='*/' \
