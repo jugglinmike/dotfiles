@@ -12,6 +12,9 @@ let NERDTreeChDirMode = 1
 map <silent> <leader>f :NERDTreeToggle<CR>
 let NERDTreeIgnore=['.pyc$[[file]]']
 
+" Open a journal file for today
+nnoremap <buffer> <localleader>j :call journal#Journal()<cr>
+
 " Tabs!
 " Hard tabs
 set shiftwidth=4

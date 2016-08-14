@@ -1,0 +1,22 @@
+#!/bin/bash -e
+
+if [ "$1" != "" ]; then
+  date_opt_value=$1
+else
+  date_opt_value=now
+fi
+
+date_opt="--date=$date_opt_value"
+
+date_value=$(date "$date_opt" +%y.%m.%d)
+file_name=~/Documents/journal/$date_value.md
+
+if [[ ! -f $file_name ]]; then
+  cat >> $file_name <<HERE
+# $date_value
+
+
+HERE
+fi
+
+echo $file_name
