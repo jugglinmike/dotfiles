@@ -73,7 +73,7 @@ au BufRead,BufNewFile ~/projects/backbone.layoutmanager/* set tabstop=2 softtabs
 au BufRead,BufNewFile ~/projects/crypto-research/* set tabstop=4 softtabstop=4 expandtab
 au BufRead,BufNewFile ~/projects/soso/* set tabstop=2 softtabstop=2 expandtab
 au BufRead,BufNewFile ~/projects/fortpoint.me/* set tabstop=4 softtabstop=4 expandtab
-au BufRead,BufNewFile ~/projects/cheerio/cheerio/* set tabstop=2 softtabstop=2 expandtab
+au BufRead,BufNewFile ~/projects/oss/cheerio/cheerio/* set tabstop=2 softtabstop=2 expandtab
 au BufRead,BufNewFile ~/projects/backbone.search/* set tabstop=2 softtabstop=2 expandtab
 au BufRead,BufNewFile ~/projects/mozilla/* set tabstop=2 softtabstop=2 expandtab
 au BufRead,BufNewFile ~/projects/qunit-mocha-ui/* set tabstop=2 softtabstop=2 expandtab
