@@ -49,7 +49,7 @@ syn keyword javaScriptMessage       alert confirm prompt status
 syn keyword javaScriptGlobal        window global
 syn keyword javaScriptMember        document event location prototype
 syn keyword javaScriptDeprecated    escape unescape __proto__
-syn keyword javaScriptReserved      abstract boolean byte char class const debugger default double enum export extends final float goto implements import int interface long native package private protected public short static super synchronized throws transient volatile 
+syn keyword javaScriptReserved      abstract boolean byte char class const debugger default double enum export extends final float goto implements import int interface long native package private protected public short static super synchronized throw transient volatilte
 
 "syn match javaScript ".*" contains=javaScriptCommentTodo,javaScriptLineComment,javaScriptCommentSkip,javaScriptSpecial,javaScriptStringD,javaScriptStringS,javaScriptSpecialCharacter,javaScriptNumber,javaScriptRegexpString,javaScriptConditional,javaScriptRepeat,javaScriptBranch,javaScriptOperator,javaScriptType,javaScriptStatement,javaScriptBoolean,javaScriptNull,javaScriptIdentifier,javaScriptLabel,javaScriptException,javaScriptMessage,javaScriptGlobal,JavaScriptMember,javaScriptDeprecated,javaScriptReserved
 
