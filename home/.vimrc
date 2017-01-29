@@ -34,6 +34,8 @@ hi ColorColumn ctermbg=236 guibg=#383838
 hi Normal ctermfg=252 ctermbg=234 cterm=none guifg=#e3e0d7 guibg=#242424 gui=none
 hi LineNr ctermfg=241 ctermbg=234 cterm=none guifg=#857b6f guibg=#242424 gui=none
 
+hi SpellBad term=reverse ctermbg=123 ctermfg=4 gui=undercurl guisp=Red
+
 set list listchars=tab:→\ ,trail:·
 
 " Supposedly sets yank to use the system clipboard as its default register,
@@ -64,6 +66,9 @@ if bufwinnr(1)
   map <C-L> <c-w>l
 "  map <C-w> <C-o><C-w>
 end
+
+" Spelling
+set spellfile=~/.vim/spell/en.utf-8.add
 
 " -------------------------
 " Project-specific settings
