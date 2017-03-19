@@ -1,6 +1,16 @@
 #!/bin/bash -e
 
-if [ "$1" != "" ]; then
+if [ "$1" == "--help" -o "$1" == "-h" ]; then
+  cat <<HELP
+Usage: $name [date spec]
+Open a text file in the '~/Documents/journal/' directory whose name is derived
+from the date specified in 'date' (see date(1) for details on supported date
+formats). If no date is provided, the current date will be used. If no such
+file exists, a file will be created with Markdown-formatted content describing
+a new journal entry for that date.
+HELP
+  exit
+elif [ "$1" != "" ]; then
   date_opt_value=$@
 else
   date_opt_value=now
