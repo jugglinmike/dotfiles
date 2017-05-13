@@ -4,6 +4,10 @@ function dot_files {
   for file in home/.[^.]*; do
     ln --symbolic --verbose --force $(readlink -f $file) $HOME;
   done
+
+  # Desktop entries for Gnome 3
+  # https://developer.gnome.org/desktop-entry-spec/
+  ln --symbolic --verbose --force $(readlink -f home/local/share/applications) $HOME/.local/share/applications
 }
 
 function hardware_dependent {
