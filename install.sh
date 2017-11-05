@@ -23,7 +23,7 @@ function hardware_dependent {
 
 function install_personal_data {
   while true; do
-    read -e -p "Path to $1 (type '-' to skip): " path
+    read -e -p "Please enter path from which to copy $1 (type '-' to skip): " path
     path=$(eval "echo $path")
     dest=$2
 
