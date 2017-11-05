@@ -82,6 +82,7 @@ function backup_source {
   mkdir -p $HOME/backup/profile
   mkdirlink $HOME/keepass-db.kdbx $HOME/backup/profile/keepass-db.kdbx
   mkdirlink $HOME/.ssh $HOME/backup/profile/ssh
+  mkdirlink $HOME/.thunderbird/*.default/abook.mab $HOME/backup/profile/abook.mab
 }
 
 echo Installing dot files...
