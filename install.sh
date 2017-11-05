@@ -82,6 +82,7 @@ function backup_source {
   mkdir -p $HOME/backup/profile
   mkdirlink $HOME/keepass-db.kdbx $HOME/backup/profile/keepass-db.kdbx
   mkdirlink $HOME/.ssh $HOME/backup/profile/ssh
+  mkdirlink $HOME/.reminders $HOME/backup/profile/reminders
   mkdirlink $HOME/.thunderbird/*.default/abook.mab $HOME/backup/profile/abook.mab
 }
 
@@ -97,6 +98,7 @@ echo Installing personal data from provided backup location...
 install_personal_data '.ssh keys' ~/.ssh
 install_personal_data 'KeePass password database' ~/keepass-db.kdbx
 install_personal_data 'Address book' ~/.thunderbird/*.default/abook.mab
+install_personal_data 'Reminder file' ~/.reminders
 echo Done installing personal data.
 
 echo Creating backup "source" directory...
