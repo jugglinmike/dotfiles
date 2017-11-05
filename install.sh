@@ -112,3 +112,7 @@ if [ -n "$1" ]; then
 else
 	echo 'Skipping installation (no hardware name specified).'
 fi
+
+echo Scheduling tasks...
+cat home/.crontab | crontab
+echo Done scheduling tasks

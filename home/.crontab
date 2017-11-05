@@ -1,0 +1,3 @@
+# Create/update an ICS-formatted version of the Remind calendar (for
+# consumption by Gnome's calendar application)
+0 * * * * ~/.dotfiles/bin/generate-ics-calendar
