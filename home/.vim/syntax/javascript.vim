@@ -34,6 +34,10 @@ syn match   javaScriptSpecialCharacter "'\\.'"
 syn match   javaScriptNumber           "-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
 syn region  javaScriptRegexpString     start=+/[^/*]+me=e-1 skip=+\\\\\|\\/+ end=+/[giuy]\{0,2\}\s*$+ end=+/[giuy]\{0,2\}\s*[;.,)\]}]+me=e-1 contains=@htmlPreproc oneline
 
+syntax match  javaScriptTemplateDelim    "\${\|}" contained
+syntax region javaScriptTemplateVar      start=+${+ end=+}+                        contains=javaScriptTemplateDelim keepend
+syntax region javaScriptTemplateString   start=+`+  skip=+\\\(`\|$\)+  end=+`+     contains=javaScriptTemplateVar,javaScriptSpecial keepend
+'
 syn keyword javaScriptConditional   if else switch
 syn keyword javaScriptRepeat        while for do in
 syn keyword javaScriptBranch        break continue
@@ -108,6 +112,8 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink javaScriptNull                Keyword
   HiLink javaScriptBoolean             Boolean
   HiLink javaScriptRegexpString        String
+  HiLink javaScriptTemplateDelim       Function
+  HiLink javaScriptTemplateString      String
 
   HiLink javaScriptIdentifier          Identifier
   HiLink javaScriptLabel               Label
