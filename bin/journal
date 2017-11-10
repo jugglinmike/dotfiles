@@ -21,7 +21,7 @@ date_opt="--date=$date_opt_value"
 date_str_abbrev=$(date "$date_opt" +%y.%m.%d)
 date_str_long=$(date "$date_opt" +%Y-%m-%d)
 file_name=~/Documents/journal/$date_str_abbrev.md
-week_calendar=$(remind -c+ ~/.reminders | sed 's/^/    /g')
+week_calendar=$(remind -c+ ~/.reminders $date_str_long | sed 's/^/    /g')
 
 if [[ ! -f $file_name ]]; then
   cat >> $file_name <<HERE
