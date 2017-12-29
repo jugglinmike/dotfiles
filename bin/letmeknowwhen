@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Run a command and report the result on the terminal and via the desktop
+# manager's notification system
+
+SECONDS=0
+started_at=$(date)
+
+"$@"
+
+duration=$SECONDS
+
+subject='Command has completed.'
+
+body="Command: $*
+Return code: $?
+Started at: $started_at
+Completed at: $(date)
+Duration: $(($duration / 60)) minutes and $(($duration % 60)) seconds"
+
+notify-send --urgency critical --icon face-wink "$subject" "$body"
+
+echo '************************************************************************'
+echo "# $subject"
+echo ""
+echo "$body"
