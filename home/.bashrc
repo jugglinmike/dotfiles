@@ -12,10 +12,12 @@ if [ -n "$DISPLAY" ]; then
      BROWSER=chromium-browser
 fi
 
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-        export TERM='xterm-256color'
+# Detect support for 256 color mode
+# https://unix.stackexchange.com/questions/43945/whats-the-difference-between-various-term-variables
+if [ -e /lib/terminfo/x/xterm-256color ]; then
+  export TERM='xterm-256color'
 else
-        export TERM='xterm-color'
+  export TERM='xterm-color'
 fi
 
 if [ -x /usr/bin/dircolors ]; then
