@@ -15,7 +15,11 @@ fi
 # Detect support for 256 color mode
 # https://unix.stackexchange.com/questions/43945/whats-the-difference-between-various-term-variables
 if [ -e /lib/terminfo/x/xterm-256color ]; then
-  export TERM='xterm-256color'
+  if [ -n "$TMUX" ]; then
+    export TERM=screen
+  else
+    export TERM='xterm-256color'
+  fi
 else
   export TERM='xterm-color'
 fi
