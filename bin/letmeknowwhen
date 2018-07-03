@@ -8,12 +8,13 @@ started_at=$(date)
 
 "$@"
 
+return_code=$?
 duration=$SECONDS
 
 subject='Command has completed.'
 
 body="Command: $*
-Return code: $?
+Return code: $return_code
 Started at: $started_at
 Completed at: $(date)
 Duration: $(($duration / 60)) minutes and $(($duration % 60)) seconds"
