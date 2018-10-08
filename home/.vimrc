@@ -11,6 +11,7 @@ execute pathogen#infect()
 let NERDTreeChDirMode = 1
 map <silent> <leader>f :NERDTreeToggle<CR>
 let NERDTreeIgnore=['.pyc$[[file]]']
+hi! link Directory Keyword
 
 " Open a journal file for today
 nnoremap <buffer> <localleader>j :call journal#Journal()<cr>
