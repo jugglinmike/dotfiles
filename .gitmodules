@@ -1,6 +1,3 @@
 [submodule "home/.vim/bundle/nerdtree"]
 	path = home/.vim/bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
-[submodule "bin/reader-pdf-src"]
-	path = bin/reader-pdf-src
-	url = git@github.com:jugglinmike/reader-pdf.git

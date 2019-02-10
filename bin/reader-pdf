@@ -1,3 +1,0 @@
-#!/bin/bash
-
-node $(dirname $(readlink -f $0))/reader-pdf-src/reader-pdf.js $@
