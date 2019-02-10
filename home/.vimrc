@@ -28,6 +28,10 @@ set number
 " Place backups in tmp directory (not working directory)
 set backupdir=~/tmp
 
+" Do not insert two spaces after '.', '?', and '!' characters when executing a
+" join command (e.g. 'J' or 'gq')
+set nojoinspaces
+
 " Display right margin at column #80
 set colorcolumn=80
 hi ColorColumn ctermbg=236 guibg=#383838
