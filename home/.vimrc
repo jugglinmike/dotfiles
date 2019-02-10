@@ -71,6 +71,15 @@ end
 " Spelling
 set spellfile=~/.vim/spell/en.utf-8.add
 
+" Wrap to 72 characters (for e-mail and commit message bodies)
+function! WrapEmail() range
+  let original=&l:textwidth
+  let &l:textwidth = 72
+  normal! gvgq
+  let &textwidth = original
+endfunction
+map <silent> <leader>e :call WrapEmail()<CR>
+
 " -------------------------
 " Project-specific settings
 
