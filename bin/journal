@@ -16,18 +16,49 @@ else
   date_opt_value=now
 fi
 
+# Columns won't be printed for lines that begin with a delimiter. To avoid
+# this, insert a marker, format into columns, and remove the marker.
+function column_fixed {
+  sed -e 's/^/COLUMN_FIXED_MARKER/g' | \
+    column -t -s'	' | \
+    sed -e 's/^COLUMN_FIXED_MARKER//g'
+}
+
+function print_next_seven_days {
+  today=$(date --date $1 +%Y-%m-%d)
+  next_week=$(date --date "$today + 1 week" +%Y-%m-%d)
+  day_of_week=$(date --date $today +%w)
+
+  if [ ${day_of_week} -eq "0" ]; then
+    remind -c+ ~/.reminders $today
+    return
+  fi
+
+  calendar=$(
+    paste -d'\t' \
+      <(remind -c+ ~/.reminders $today) \
+      <(remind -c+ ~/.reminders $next_week) | \
+      column_fixed \ |
+      sed -e 's/\([+|]\)  [+|]/\1/g;s/^   //g'
+  )
+
+  start_byte=$(echo $calendar | grep -Eo "^(\+-+){${day_of_week}}" | wc --bytes)
+  end_byte=$(echo $calendar | grep -Eo "^(\+-+){$((day_of_week + 7))}" | wc --bytes)
+
+  echo "$calendar" | cut --bytes ${start_byte}-${end_byte}
+}
+
 date_opt="--date=$date_opt_value"
 
 date_str_abbrev=$(date "$date_opt" +%y.%m.%d)
 date_str_long=$(date "$date_opt" +%Y-%m-%d)
 file_name=~/Documents/journal/$date_str_abbrev.md
-week_calendar=$(remind -c+ ~/.reminders $date_str_long | sed 's/^/    /g')
 
 if [[ ! -f $file_name ]]; then
   cat >> $file_name <<HERE
 # $date_str_abbrev
 
-$week_calendar
+$(print_next_seven_days $date_str_long | sed 's/^/    /g')
 
 HERE
 fi
