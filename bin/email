@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# A gross script to parse e-mail-looking text (generally sent from my editor)
+# and instruct Thunderbird to open a e-mail composition window with the
+# relevant fields filled in.
+
+input=$(cat)
+
+# Parse fields
+head=$(echo "$input" | awk '1;/^$/{exit}')
+to=$(echo "$head" | grep -Ei '^to:' | sed 's/to:\s*//i' | paste -sd ',' -)
+bcc=$(echo "$head" | grep -Ei '^bcc:' | sed 's/bcc:\s*//i' | paste -sd ',' -)
+cc=$(echo "$head" | grep -Ei '^cc:' | sed 's/cc:\s*//i' | paste -sd ',' -)
+subject=$(echo "$head" | grep -Ei '^subject:' | sed 's/subject:\s*//i')
+body=$(echo "$input" | awk '/^$/,0' | tail -n +2)
+
+# Compose Thunderbird argument
+options=to=\'${to}\'
+
+if [ -n "${cc}" ]; then
+  options=${options},cc=${cc}
+fi
+
+if [ -n "${bcc}" ]; then
+  optiions=${options},bcc=${bcc}
+fi
+
+options=${options},subject=${subject},body=${body}
+
+thunderbird -compose "$options"
+
+# Print original input (to preserve text when sent from vim)
+echo "$input
+"
