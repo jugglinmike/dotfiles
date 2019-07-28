@@ -2,6 +2,8 @@
 
 1. Install Bitpim
 
+       $ sudo add-apt-repository universe
+       $ sudo apt-get update
        $ sudo apt-get install bitpim
 
 2. Use the "Bluetooth" system menu to pair with the phone. Highlight the device
