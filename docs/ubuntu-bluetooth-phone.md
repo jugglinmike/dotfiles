@@ -41,7 +41,7 @@
 
 6. Run Bitpim and open the "Edit Settings" dialog.
    - Select the correct "Phone Type"
-   - Enter `/dev/rfcomm01` as the value for the "Com Port" option
+   - Enter `/dev/rfcomm0` as the value for the "Com Port" option
 7. Click "Get Phone Data"
 
 Sources:
