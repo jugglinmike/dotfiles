@@ -30,14 +30,14 @@ function print_next_seven_days {
   day_of_week=$(date --date $today +%w)
 
   if [ ${day_of_week} -eq "0" ]; then
-    remind -c+ ~/.reminders $today
+    remind -c+ ~/Documents/reminders/main.rem $today
     return
   fi
 
   calendar=$(
     paste -d'\t' \
-      <(remind -c+ ~/.reminders $today) \
-      <(remind -c+ ~/.reminders $next_week) | \
+      <(remind -c+ ~/Documents/reminders/main.rem $today) \
+      <(remind -c+ ~/Documents/reminders/main.rem $next_week) | \
       column_fixed \ |
       sed -e 's/\([+|]\)  [+|]/\1/g;s/^   //g'
   )
