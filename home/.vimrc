@@ -102,3 +102,5 @@ au BufRead,BufNewFile ~/projects/transmogrify/* set tabstop=2 softtabstop=2 expa
 au BufRead,BufNewFile ~/projects/jquery.pep.js/* set tabstop=2 softtabstop=2 expandtab
 au BufRead,BufNewFile ~/projects/whac-a-mole/* set tabstop=2 softtabstop=2 expandtab
 au BufRead,BufNewFile ~/Documents/ledger/* set filetype=ledger
+au BufRead,BufNewFile ~/projects/oss/cycle-experiment/* set noswapfile backupcopy=yes
+au BufRead,BufNewFile ~/projects/oss/ingradient/* set noswapfile backupcopy=yes
