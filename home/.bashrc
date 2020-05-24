@@ -57,7 +57,7 @@ PATH=$PATH:/sbin:/usr/sbin:$HOME/.dotfiles/bin
 
 # For Python
 export WORKON_HOME=~/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+source ~/.local/bin/virtualenvwrapper.sh
 
 # For Node.js
 export PATH=$PATH:/opt/joyent/node/bin
