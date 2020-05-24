@@ -21,7 +21,6 @@ wget \
   --page-requisites \
   --html-extension \
   --convert-links \
-  --restrict-file-names=windows \
   $domain_opt \
   --no-parent \
   $1
