@@ -22,7 +22,7 @@ if [ -n "${cc}" ]; then
 fi
 
 if [ -n "${bcc}" ]; then
-  optiions=${options},bcc=${bcc}
+  options=${options},bcc=${bcc}
 fi
 
 options=${options},subject=${subject},body=${body}
