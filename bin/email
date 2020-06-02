@@ -18,14 +18,14 @@ body=$(echo "$input" | awk '/^$/,0' | tail -n +2)
 options=to=\'${to}\'
 
 if [ -n "${cc}" ]; then
-  options=${options},cc=${cc}
+  options=${options},cc=\'${cc}\'
 fi
 
 if [ -n "${bcc}" ]; then
-  options=${options},bcc=${bcc}
+  options=${options},bcc=\'${bcc}\'
 fi
 
-options=${options},subject=${subject},body=${body}
+options=${options},subject=\'${subject}\',body=\'${body}\'
 
 thunderbird -compose "$options"
 
