@@ -8,6 +8,7 @@ input=$(cat)
 
 # Parse fields
 head=$(echo "$input" | awk '1;/^$/{exit}')
+from=$(echo "$head" | grep -Ei '^from:' | sed 's/from:\s*//i' | paste -sd ',' -)
 to=$(echo "$head" | grep -Ei '^to:' | sed 's/to:\s*//i' | paste -sd ',' -)
 bcc=$(echo "$head" | grep -Ei '^bcc:' | sed 's/bcc:\s*//i' | paste -sd ',' -)
 cc=$(echo "$head" | grep -Ei '^cc:' | sed 's/cc:\s*//i' | paste -sd ',' -)
@@ -16,6 +17,10 @@ body=$(echo "$input" | awk '/^$/,0' | tail -n +2)
 
 # Compose Thunderbird argument
 options=to=\'${to}\'
+
+if [ -n "${from}" ]; then
+  options=${options},from=\'${from}\'
+fi
 
 if [ -n "${cc}" ]; then
   options=${options},cc=\'${cc}\'
