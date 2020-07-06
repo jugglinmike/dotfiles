@@ -4,3 +4,6 @@
 [submodule "home/.vim/bundle/vim-ledger"]
 	path = home/.vim/bundle/vim-ledger
 	url = git@github.com:ledger/vim-ledger.git
+[submodule "home/.vim/bundle/typescript-vim"]
+	path = home/.vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
