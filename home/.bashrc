@@ -65,3 +65,6 @@ export PATH=$PATH:/opt/node/node/bin
 # For Ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# For Go
+export PATH=$PATH:/opt/go/go/bin
