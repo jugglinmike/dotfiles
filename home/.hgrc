@@ -1,8 +1,0 @@
-[ui]
-username = Mike Pennisi <mike@mikepennisi.com>
-verbose = True
-ignore = ~/.gitignore-global
-editor = vim
-
-[extensions]
-strip =

@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Bocoup Slack
-Exec=/usr/bin/firefox -P BocoupSlack
-Icon=/home/mike/.local/share/applications/bocoup-slack.png

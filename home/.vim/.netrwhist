@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/mike/python'
-let g:netrw_dirhist_2='/home/mike'
-let g:netrw_dirhist_3='/home/mike/projects/html5please'
-let g:netrw_dirhist_4='/home/mike/projects/pbs/map_center/node_modules'
-let g:netrw_dirhist_5='/etc/ld.so.conf.d'
-let g:netrw_dirhist_6='/home/mike/projects/pbs/map_center/node_modules'

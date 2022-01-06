@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# Clone the git repo at the given GitHub Gist ID (useful because GitHub does
-# not currently offer the git URL for Gists)
-
-git clone git@gist.github.com:$1.git $2
